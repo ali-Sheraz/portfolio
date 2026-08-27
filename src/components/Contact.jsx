@@ -15,7 +15,7 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-6">
             Let's build something <span className="text-gradient">great together.</span>
           </h2>
-          <p className="text-white/60 text-lg max-w-xl mx-auto mb-10">
+          <p className="text-[var(--fg)]/60 text-lg max-w-xl mx-auto mb-10">
             Open to full-stack and AI engineering opportunities. Reach out and I'll get back to you quickly.
           </p>
 
@@ -28,16 +28,16 @@ export default function Contact() {
             </a>
           </div>
 
-          <div className="flex items-center justify-center gap-6 mt-10 text-white/50">
-            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+          <div className="flex items-center justify-center gap-6 mt-10 text-[var(--fg)]/50">
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--fg)] transition-colors">
               GitHub
             </a>
-            <span className="text-white/20">/</span>
-            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            <span className="text-[var(--fg)]/20">/</span>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--fg)] transition-colors">
               LinkedIn
             </a>
-            <span className="text-white/20">/</span>
-            <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="hover:text-white transition-colors">
+            <span className="text-[var(--fg)]/20">/</span>
+            <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="hover:text-[var(--fg)] transition-colors">
               {profile.phone}
             </a>
           </div>

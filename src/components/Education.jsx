@@ -13,10 +13,10 @@ export default function Education() {
         >
           <p className="font-mono text-sm text-[#22d3ee] uppercase tracking-widest mb-3">Education</p>
           <div className="glass rounded-2xl p-7">
-            <h3 className="font-semibold text-lg text-white">{education.degree}</h3>
-            <p className="text-white/60 mt-1">{education.school}</p>
-            <p className="font-mono text-xs text-white/40 mt-2">{education.period}</p>
-            <p className="text-white/50 text-sm mt-4 leading-relaxed">{education.detail}</p>
+            <h3 className="font-semibold text-lg text-[var(--fg)]">{education.degree}</h3>
+            <p className="text-[var(--fg)]/60 mt-1">{education.school}</p>
+            <p className="font-mono text-xs text-[var(--fg)]/40 mt-2">{education.period}</p>
+            <p className="text-[var(--fg)]/50 text-sm mt-4 leading-relaxed">{education.detail}</p>
           </div>
         </motion.div>
 
@@ -30,9 +30,9 @@ export default function Education() {
           <div className="space-y-4">
             {certifications.map((c) => (
               <div key={c.name} className="glass rounded-2xl p-7">
-                <h3 className="font-semibold text-lg text-white">{c.name}</h3>
-                <p className="text-white/60 mt-1">{c.issuer}</p>
-                <p className="font-mono text-xs text-white/40 mt-2">{c.date}</p>
+                <h3 className="font-semibold text-lg text-[var(--fg)]">{c.name}</h3>
+                <p className="text-[var(--fg)]/60 mt-1">{c.issuer}</p>
+                <p className="font-mono text-xs text-[var(--fg)]/40 mt-2">{c.date}</p>
               </div>
             ))}
           </div>

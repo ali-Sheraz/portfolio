@@ -26,12 +26,12 @@ export default function Skills() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="glow-border glass rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300"
             >
-              <h3 className="font-semibold text-white/90 mb-4">{group.title}</h3>
+              <h3 className="font-semibold text-[var(--fg)]/90 mb-4">{group.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="text-xs font-mono px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/60"
+                    className="text-xs font-mono px-3 py-1.5 rounded-full bg-[var(--fg)]/5 border border-[var(--fg)]/10 text-[var(--fg)]/60"
                   >
                     {item}
                   </span>

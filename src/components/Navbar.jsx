@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { profile } from "../data/portfolio";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { label: "About", href: "#about" },
@@ -37,48 +38,54 @@ export default function Navbar() {
         >
           <a href="#top" className="font-semibold tracking-tight text-lg">
             <span className="text-gradient">Sheraz</span>
-            <span className="text-white/70">.dev</span>
+            <span className="text-[var(--fg)]/70">.dev</span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm text-white/70">
+          <nav className="hidden md:flex items-center gap-8 text-sm text-[var(--fg)]/70">
             {links.map((l) => (
-              <a key={l.href} href={l.href} className="hover:text-white transition-colors">
+              <a key={l.href} href={l.href} className="hover:text-[var(--fg)] transition-colors">
                 {l.label}
               </a>
             ))}
           </nav>
 
-          <a
-            href={profile.resumeUrl}
-            download
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 px-4 py-2 text-sm font-medium transition-colors"
-          >
-            Resume
-          </a>
+          <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
+            <a
+              href={profile.resumeUrl}
+              download
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--fg)]/10 hover:bg-[var(--fg)]/20 border border-[var(--fg)]/10 px-4 py-2 text-sm font-medium transition-colors"
+            >
+              Resume
+            </a>
+          </div>
 
-          <button
-            onClick={() => setOpen((o) => !o)}
-            className="md:hidden text-white/80 p-2"
-            aria-label="Toggle menu"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              {open ? (
-                <path d="M6 6l12 12M6 18L18 6" strokeLinecap="round" />
-              ) : (
-                <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
-              )}
-            </svg>
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              onClick={() => setOpen((o) => !o)}
+              className="text-[var(--fg)]/80 p-2"
+              aria-label="Toggle menu"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                {open ? (
+                  <path d="M6 6l12 12M6 18L18 6" strokeLinecap="round" />
+                ) : (
+                  <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {open && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden glass mt-2 rounded-2xl px-6 py-5 flex flex-col gap-4 text-white/80"
+            className="md:hidden glass mt-2 rounded-2xl px-6 py-5 flex flex-col gap-4 text-[var(--fg)]/80"
           >
             {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="hover:text-white">
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="hover:text-[var(--fg)]">
                 {l.label}
               </a>
             ))}

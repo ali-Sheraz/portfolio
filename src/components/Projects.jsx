@@ -27,7 +27,7 @@ export default function Projects() {
               className="group relative glass rounded-2xl p-7 hover:-translate-y-1.5 transition-all duration-300 hover:shadow-2xl hover:shadow-[#7c5cff]/10"
             >
               <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="text-xl font-bold text-white group-hover:text-gradient transition-colors">
+                <h3 className="text-xl font-bold text-[var(--fg)] group-hover:text-gradient transition-colors">
                   {p.name}
                 </h3>
                 {p.url && (
@@ -35,7 +35,7 @@ export default function Projects() {
                     href={p.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="shrink-0 rounded-full border border-white/15 p-2 text-white/60 hover:text-white hover:border-[#22d3ee]/50 transition-colors"
+                    className="shrink-0 rounded-full border border-[var(--fg)]/15 p-2 text-[var(--fg)]/60 hover:text-[var(--fg)] hover:border-[#22d3ee]/50 transition-colors"
                     aria-label={`Open ${p.name}`}
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -45,13 +45,13 @@ export default function Projects() {
                 )}
               </div>
 
-              <p className="text-white/60 text-sm leading-relaxed mb-5">{p.description}</p>
+              <p className="text-[var(--fg)]/60 text-sm leading-relaxed mb-5">{p.description}</p>
 
               <div className="flex flex-wrap gap-2">
                 {p.stack.map((s) => (
                   <span
                     key={s}
-                    className="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-white/50"
+                    className="text-xs font-mono px-2.5 py-1 rounded-md bg-[var(--fg)]/5 border border-[var(--fg)]/10 text-[var(--fg)]/50"
                   >
                     {s}
                   </span>
