@@ -4,7 +4,7 @@ export const profile = {
   tagline:
     "I design, build and ship scalable web platforms — from AI-powered agents to real-time SaaS dashboards.",
   location: "Pakistan",
-  phone: "0317 7756698",
+  phone: "0317 7656698",
   email: "asherazali121823@gmail.com",
   github: "https://github.com/aliSheraz",
   linkedin: "https://www.linkedin.com/in/sheraz-ali-a760b1250/",
